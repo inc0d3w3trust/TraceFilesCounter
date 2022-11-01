@@ -10,7 +10,17 @@ Web application allows to:
 
 ## Environment variables
 Application uses environment variables to setting entire workflow. An example of <code>.env</code> file presented below:
-
+```
+TRACE_TMP_DIR=/temp/trace_exchange
+TRACE_SRC_DIR=/temp/trace_source
+APP_PORT=8088
+INTERVAL_DELAY_MS=3000
+DATETIME_FORMAT=dd.mmm.yy HH:MM:ss
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_DATABASE=''
+REDIS_AUTH=''
+```
 
   # A real work screenshots
   <p align="center">
