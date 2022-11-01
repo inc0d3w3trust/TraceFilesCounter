@@ -21,11 +21,13 @@ REDIS_PORT=6379
 REDIS_DATABASE=''
 REDIS_AUTH=''
 ```
+## Requirements
+Redis server. NodeJS versions: from 12 to 15.
 
-  # A real work screenshots
-  <p align="center">
-    <img src="https://github.com/inc0d3w3trust/TraceFilesCounter/blob/main/assets/images/HeaderCounter.png" width="640" title="screenshot1">
-  </p>
-  <p align="center">
-    <img src="https://github.com/inc0d3w3trust/TraceFilesCounter/blob/main/assets/images/GreenCardCounter.png" width="640" title="screenshot2">
-  </p>
+# A real work screenshots
+<p align="center">
+  <img src="https://github.com/inc0d3w3trust/TraceFilesCounter/blob/main/assets/images/HeaderCounter.png" width="640" title="screenshot1">
+</p>
+<p align="center">
+  <img src="https://github.com/inc0d3w3trust/TraceFilesCounter/blob/main/assets/images/GreenCardCounter.png" width="640" title="screenshot2">
+</p>
