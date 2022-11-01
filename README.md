@@ -8,4 +8,10 @@ Web application allows to:
   - switching to another product and returning to the previous one without losing the counter
   - data transfer from the machine to the data workflow chain
   
-  
+  # A real work screenshots
+  <p align="center">
+    <img src="https://github.com/inc0d3w3trust/TraceFilesCounter/blob/main/assets/images/HeaderCounter.png" width="640" title="screenshot1">
+  </p>
+  <p align="center">
+    <img src="https://github.com/inc0d3w3trust/TraceFilesCounter/blob/main/assets/images/GreenCardCounter.png" width="640" title="screenshot2">
+  </p>
