@@ -1,0 +1,41 @@
+<!--
+
+ Copyright 2021 r3c1us0@protonmail.com
+ Permission to use, copy, modify, and/or distribute this software for any purpose with
+ or without fee is hereby granted, provided that the above copyright notice and this permission 
+ notice appear in all copies. 
+ 
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO
+ THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT,
+ OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+ WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+-->
+
+<div class="list-group">
+    <a href="/" class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+            <div style="font-size: large;">
+                <%= orderNumber %> - <%= smacode %>
+            </div>
+            <div style="font-size: large;">
+                COUNTER: <%= boardsCounter %>
+            </div>
+            <div style="font-size: medium;">
+                time: <%= estimatedTime %>
+            </div>
+        </div>
+    </a>
+    <div class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-center">
+            <form method="POST" action="/">
+                <lable>Edit current counter</lable>
+                <input type="number" name="formCounterDest" value="0" maxlength="4" size="4" style="width: 63px;" <%- (orderNumber == 0) ? "disabled" : '' %> />                        
+                <button type="submit" <%- (orderNumber == 0) ? "disabled" : '' %> class="btn btn-success btn-sm">Apply</button>
+                <input type="hidden" name="hashKey" value="<%= orderNumber %>" />
+            </form>
+        </div>
+    </div>
+</div>

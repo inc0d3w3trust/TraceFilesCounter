@@ -1,0 +1,38 @@
+<!--
+
+ Copyright 2021 r3c1us0@protonmail.com
+ Permission to use, copy, modify, and/or distribute this software for any purpose with
+ or without fee is hereby granted, provided that the above copyright notice and this permission 
+ notice appear in all copies. 
+ 
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO
+ THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT,
+ OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+ WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+-->
+
+<div class="col">
+  <div class="card <%- (orderItem.modifiedAt != 0) ? 'border-danger' : 'border-secondary' %> <%- (currentOrderNumber == orderItem.hashKey) ? 'text-white bg-success' : '' %> mb-3" style="width: 15rem;">
+      <div class="card-header text-center"><%= orderItem.hashKey %></div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-center <%- (currentOrderNumber == orderItem.hashKey) ? 'text-white bg-success': '' %>">Qty: <%= orderItem.counter %></li>
+          <li class="list-group-item text-center <%- (currentOrderNumber == orderItem.hashKey) ? 'text-white bg-success': '' %>">
+            <%= orderItem.createdAt %>
+          </li>
+          <li class="list-group-item text-center <%- (currentOrderNumber == orderItem.hashKey) ? 'text-white bg-success': '' %>">
+            <%= orderItem.updatedAt %>
+          </li>
+          <li class="list-group-item text-center <%- (currentOrderNumber == orderItem.hashKey) ? 'text-white bg-success': '' %>">
+            <%= orderItem.timePeriod %>
+          </li>
+        </ul>
+      </div>
+      <div class="card-footer text-center <%- (currentOrderNumber == orderItem.hashKey) ? 'text-white': 'text-muted' %>">
+        <%= orderItem.smacode %>
+      </div>
+    </div>                    
+</div>

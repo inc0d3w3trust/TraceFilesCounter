@@ -1,0 +1,47 @@
+<!--
+
+ Copyright 2021 r3c1us0@protonmail.com
+ Permission to use, copy, modify, and/or distribute this software for any purpose with
+ or without fee is hereby granted, provided that the above copyright notice and this permission 
+ notice appear in all copies. 
+ 
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO
+ THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT,
+ OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+ WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+-->
+
+<% if(dublicatedValues.length > 0) { %>
+
+<table class="table table-hover alert-danger">
+    <thead>
+        <tr>
+            <th colspan="4"><h3 class="text-center text-danger">DANGER - Boards Duplicates - PLEASE STOP</h3></th>
+        </tr>
+        <tr>
+            <th colspan="4"><h5 class="text-center text-info">Call to AOI Programmers tel: 8116, 8143, 8144</h5></th>
+        </tr>
+
+        <tr>
+            <th scope="col">PMJ file name</th>
+            <th scope="col">Duplicate in PMJ</th>
+            <th scope="col">Duplicate in Patterns</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <% dublicatedValues.forEach(item => { %>
+            <tr class="table-danger">
+                <th scope="row"><%= item.title %></th>
+                <td><%- (item.duplicatePMJ) ? 'YES' : '' %></td>
+                <td><%- (item.duplicatePatters) ? 'YES' : '' %></td>
+                <td><%= item.createdAt %></td>
+            </tr>    
+        <% }) %>
+    </tbody>
+</table>
+<% } %>
