@@ -7,7 +7,11 @@ Web application allows to:
   - logging of all previously produced products
   - switching to another product and returning to the previous one without losing the counter
   - data transfer from the machine to the data workflow chain
-  
+
+## Environment variables
+Application uses environment variables to setting entire workflow. An example of <code>.env</code> file presented below:
+
+
   # A real work screenshots
   <p align="center">
     <img src="https://github.com/inc0d3w3trust/TraceFilesCounter/blob/main/assets/images/HeaderCounter.png" width="640" title="screenshot1">
